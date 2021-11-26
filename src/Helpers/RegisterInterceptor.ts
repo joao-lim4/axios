@@ -62,7 +62,7 @@ class RegisterInterceptors {
         )
     }
     
-    private registerBasicInterceptors() {
+    private registerBasicInterceptors(): void | Array<IInterceptorsRegisterIDs> {
         const keysBasicInterceptos = Object.keys({...this.defultConfig.basicInterceptors});
         if(!keysBasicInterceptos.length) return;
 
@@ -73,6 +73,8 @@ class RegisterInterceptors {
                 this.registerRequestInterceptor(keyInterceptor);
             }
         });
+
+        return this.InterceptorsRegisterIDs;
     }
 
 
@@ -94,7 +96,7 @@ class RegisterInterceptors {
                 });
             });
 
-            // window.registerModule() = this.InterceptorsRegisterIDs;
+            // window.registerModule() = this.InterceptorsRegisterIDs
             return this.InterceptorsRegisterIDs;
         }
 
