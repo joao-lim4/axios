@@ -1,6 +1,6 @@
 import { AxiosInstance } from 'axios';
-import { IEjectInterceptor, IInterceptorsRegisterIDs } from '../@types/Interceptors';
-import { IOptionsInterceptors } from '../@types/OptionsInterceptors';
+import { IEjectInterceptor, IInterceptorsRegisterIDs } from '../Interfaces/Interceptors';
+import { IOptionsInterceptors } from '../Interfaces/OptionsInterceptors';
 import { objectInterceptors } from '../Interceptors/BasicInterceptors';
 
 class RegisterInterceptors {
@@ -94,6 +94,7 @@ class RegisterInterceptors {
                 });
             });
 
+            // window.registerModule() = this.InterceptorsRegisterIDs;
             return this.InterceptorsRegisterIDs;
         }
 

@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
-import { IOptionsInterceptors } from '../@types/OptionsInterceptors';
+import { IOptionsInterceptors } from '../Interfaces/OptionsInterceptors';
 import { RegisterInterceptors } from '../Helpers/RegisterInterceptor';
 import { Requests } from '../Requests/Requests';
 
